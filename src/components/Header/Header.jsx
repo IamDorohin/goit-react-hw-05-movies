@@ -1,22 +1,24 @@
 import {
   Header,
+  HeaderNav,
   HeaderList,
   HeaderListItem,
-  // HeaderListLink,
+  HeaderListLink,
 } from './Header.styled';
-import { Link } from 'react-router-dom';
 
 export const HeaderContainer = () => {
   return (
     <Header>
-      <HeaderList>
-        <HeaderListItem>
-          <Link to="/">Home</Link>
-        </HeaderListItem>
-        <HeaderListItem>
-          <Link to="movies">Movies</Link>
-        </HeaderListItem>
-      </HeaderList>
+      <HeaderNav>
+        <HeaderList>
+          <HeaderListItem>
+            <HeaderListLink to="/">Home</HeaderListLink>
+          </HeaderListItem>
+          <HeaderListItem>
+            <HeaderListLink to="movies">Movies</HeaderListLink>
+          </HeaderListItem>
+        </HeaderList>
+      </HeaderNav>
     </Header>
   );
 };

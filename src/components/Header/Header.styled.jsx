@@ -1,12 +1,50 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
-  background-color: teal;
+  height: 50px;
+  background-color: #222b40;
+  display: flex;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding-left: 145px;
+  padding-right: 40px;
 `;
 
-export const HeaderList = styled.ul``;
+export const HeaderNav = styled.nav``;
 
-export const HeaderListItem = styled.li``;
+export const HeaderList = styled.ul`
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 0;
+`;
 
-export const HeaderListLink = styled(Link)``;
+export const HeaderListItem = styled.li`
+  border-right: 1px solid white;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  :first-child {
+    border-left: 1px solid white;
+  }
+`;
+
+export const HeaderListLink = styled(NavLink)`
+  text-decoration: none;
+  color: white;
+
+  &:hover,
+  &:focus {
+    color: #a1a6a6;
+  }
+
+  &.active {
+    font-weight: bold;
+    color: #08a1a3;
+  }
+`;

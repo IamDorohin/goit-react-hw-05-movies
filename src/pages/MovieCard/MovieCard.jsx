@@ -1,5 +1,10 @@
-import { MovieContainer } from './MovieCard.styled';
-import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
+import {
+  MovieContainer,
+  MovieBackToListLink,
+  MovieExtraInfoList,
+  MovieExtraInfoLink,
+} from './MovieCard.styled';
+import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { useState, useEffect, Suspense } from 'react';
 import { getCurrentMovie } from '../../services/FetchAPI';
 import MovieInfo from '../../components/MovieCard/MovieInfo/MovieInfo';
@@ -21,12 +26,14 @@ const MovieCard = () => {
 
   return (
     <MovieContainer>
-      <Link to={data}>Back to search list</Link>
-
+      <MovieBackToListLink to={data}>Back to search list</MovieBackToListLink>
       <MovieInfo currentMovieInfo={currentMovie} />
-      <h2>Additional information</h2>
-      <Link to="cast">Cast</Link>
-      <Link to="reviews">Reviews</Link>
+      <p>Additional information</p>
+      <MovieExtraInfoList>
+        <MovieExtraInfoLink to="cast">Cast</MovieExtraInfoLink>
+        <MovieExtraInfoLink to="reviews">Reviews</MovieExtraInfoLink>
+      </MovieExtraInfoList>
+
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>

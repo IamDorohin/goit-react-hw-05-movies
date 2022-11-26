@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieReviews } from '../../../services/FetchAPI';
+import {
+  ReviewsSection,
+  ReviewsList,
+  ReviewsItem,
+  ReviewsAuthors,
+  ReviewsDescription,
+} from 'components/MovieCard/Reviews/Reviews.styled';
 
 const Reviews = () => {
   const { movieId } = useParams();
@@ -17,16 +24,16 @@ const Reviews = () => {
   }
 
   return (
-    <section>
-      <ul>
+    <ReviewsSection>
+      <ReviewsList>
         {reviews.map(({ id, author, content }) => (
-          <li key={id}>
-            <p>Author: {author}</p>
-            <p>{content}</p>
-          </li>
+          <ReviewsItem key={id}>
+            <ReviewsAuthors>Author: {author}</ReviewsAuthors>
+            <ReviewsDescription>{content}</ReviewsDescription>
+          </ReviewsItem>
         ))}
-      </ul>
-    </section>
+      </ReviewsList>
+    </ReviewsSection>
   );
 };
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import SearchBar from 'components/SearchBar/SearchBar';
 import SearchList from 'components/SearchList/SearchList';
+import { MoviesPageContaier } from './Movies.styled';
 import * as API from '../../services/FetchAPI';
 import { useSearchParams } from 'react-router-dom';
 
@@ -35,14 +36,14 @@ const Movies = () => {
   };
 
   return (
-    <main>
+    <MoviesPageContaier>
       <SearchBar
         element={searchQueryState}
         onSubmit={handleSearchQueryChange}
         onChange={changeSearch}
       />
       <SearchList moviesArray={searchingMovies} />
-    </main>
+    </MoviesPageContaier>
   );
 };
 
