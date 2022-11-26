@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SearchContainer = styled.div`
-  padding-left: 145px;
+  padding-left: 230px;
   background-color: white;
   height: 70px;
 `;
@@ -10,7 +10,7 @@ export const SearchForm = styled.form`
   padding-top: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid #000;
-  width: 252px;
+  width: 258px;
 `;
 
 export const SearchInput = styled.input`

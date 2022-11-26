@@ -8,7 +8,7 @@ export const CastList = styled.ul`
   padding-left: 0;
 `;
 export const CastItem = styled.li`
-  width: calc((100% - 675px) / 4);
+  width: calc(100% / 6);
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;

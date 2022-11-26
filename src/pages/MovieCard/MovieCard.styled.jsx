@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const MovieContainer = styled.main`
   margin-left: auto;
   margin-right: auto;
-  padding-left: 145px;
+  padding-left: 230px;
   padding-top: 20px;
   padding-right: 40px;
   background-color: white;

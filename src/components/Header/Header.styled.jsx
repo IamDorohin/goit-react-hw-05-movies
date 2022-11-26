@@ -10,7 +10,7 @@ export const Header = styled.header`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  padding-left: 145px;
+  padding-left: 230px;
   padding-right: 40px;
 `;
 
